@@ -26,17 +26,18 @@ export const Navbar = () => {
             >
               About
             </a>
-            <a
-              href="#skills"
-              className="text-slate-300 hover:text-cyan-400 transition-colors text-base font-medium tracking-wide"
-            >
-              Skills
-            </a>
+
             <a
               href="#projects"
               className="text-slate-300 hover:text-cyan-400 transition-colors text-base font-medium tracking-wide"
             >
               Projects
+            </a>
+            <a
+              href="#skills"
+              className="text-slate-300 hover:text-cyan-400 transition-colors text-base font-medium tracking-wide"
+            >
+              Skills
             </a>
             <a
               href="#contact"
@@ -78,19 +79,20 @@ export const Navbar = () => {
           >
             About
           </a>
-          <a
-            href="#skills"
-            onClick={() => setIsOpen(false)}
-            className="block px-3 py-2 rounded-lg text-lg font-medium text-slate-300 hover:text-cyan-400 hover:bg-slate-800/50"
-          >
-            Skills
-          </a>
+
           <a
             href="#projects"
             onClick={() => setIsOpen(false)}
             className="block px-3 py-2 rounded-lg text-lg font-medium text-slate-300 hover:text-cyan-400 hover:bg-slate-800/50"
           >
             Projects
+          </a>
+          <a
+            href="#skills"
+            onClick={() => setIsOpen(false)}
+            className="block px-3 py-2 rounded-lg text-lg font-medium text-slate-300 hover:text-cyan-400 hover:bg-slate-800/50"
+          >
+            Skills
           </a>
           <a
             href="#contact"

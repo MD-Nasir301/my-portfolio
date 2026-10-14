@@ -1,31 +1,38 @@
-import * as Icons from 'lucide-react';
-import { personalInfo } from '../data/projectsData';
+import * as Icons from "lucide-react";
+import { personalInfo } from "../data/projectsData";
+import myPhoto from "../assets/my-photo.jpg";
 
 export const Hero = () => {
   const ArrowRight = Icons.ArrowRight || Icons.ChevronRight;
   const Download = Icons.Download || Icons.FileText;
 
   return (
-    <section id="about" className="relative min-h-[calc(100vh-80px)] flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <section
+      id="about"
+      className="relative min-h-[calc(100vh-80px)] flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 overflow-hidden"
+    >
       {/* Background Glow Effects */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-cyan-500/10 rounded-full blur-[120px] pointer-events-none"></div>
       <div className="absolute bottom-10 right-10 w-[400px] h-[400px] bg-blue-600/10 rounded-full blur-[120px] pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
-        
         {/* Left Column: Text & CTA */}
         <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
-          
           {/* Status Badge */}
           <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-slate-900/80 border border-slate-700/60 shadow-inner">
             <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
-            <span className="text-xs sm:text-sm font-medium text-slate-300">Available for Opportunities</span>
+            <span className="text-xs sm:text-sm font-medium text-slate-300">
+              Available for Opportunities
+            </span>
           </div>
 
           {/* Main Title */}
           <div className="space-y-2">
             <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight text-white leading-tight">
-              Hi, I'm <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-indigo-400 bg-clip-text text-transparent">{personalInfo.name}</span>
+              Hi, I'm{" "}
+              <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-indigo-400 bg-clip-text text-transparent">
+                {personalInfo.name}
+              </span>
             </h1>
             <p className="text-xl sm:text-2xl font-semibold text-cyan-400 tracking-wide">
               {personalInfo.designation}
@@ -39,16 +46,16 @@ export const Hero = () => {
 
           {/* Action Buttons */}
           <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-4">
-            <a 
-              href="#projects" 
+            <a
+              href="#projects"
               className="px-8 py-3.5 rounded-full text-base font-semibold text-slate-900 bg-cyan-400 hover:bg-cyan-300 shadow-lg shadow-cyan-400/25 transition-all transform hover:-translate-y-0.5 flex items-center space-x-2"
             >
               <span>Explore Projects</span>
               {ArrowRight && <ArrowRight size={18} />}
             </a>
 
-            <a 
-              href={personalInfo.resumeUrl} 
+            <a
+              href={personalInfo.resumeUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-3.5 rounded-full text-base font-semibold text-slate-200 bg-slate-900/80 hover:bg-slate-800 border border-slate-700/80 shadow-lg transition-all transform hover:-translate-y-0.5 flex items-center space-x-2"
@@ -60,12 +67,11 @@ export const Hero = () => {
 
           {/* Social Links with Tooltips */}
           <div className="flex items-center justify-center lg:justify-start space-x-4 pt-4">
-            
             {/* GitHub */}
             <div className="relative group">
-              <a 
-                href={personalInfo.github} 
-                target="_blank" 
+              <a
+                href={personalInfo.github}
+                target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 rounded-xl bg-slate-900/80 border border-slate-800 text-slate-300 hover:text-cyan-400 hover:border-cyan-500/40 transition-all flex items-center justify-center"
               >
@@ -80,9 +86,9 @@ export const Hero = () => {
 
             {/* LinkedIn */}
             <div className="relative group">
-              <a 
-                href={personalInfo.linkedin} 
-                target="_blank" 
+              <a
+                href={personalInfo.linkedin}
+                target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 rounded-xl bg-slate-900/80 border border-slate-800 text-slate-300 hover:text-cyan-400 hover:border-cyan-500/40 transition-all flex items-center justify-center"
               >
@@ -97,12 +103,19 @@ export const Hero = () => {
 
             {/* Email */}
             <div className="relative group">
-              <a 
-                href={`mailto:${personalInfo.email}`} 
+              <a
+                href={`mailto:${personalInfo.email}`}
                 className="p-3 rounded-xl bg-slate-900/80 border border-slate-800 text-slate-300 hover:text-cyan-400 hover:border-cyan-500/40 transition-all flex items-center justify-center"
               >
-                <svg className="w-5 h-5 fill-none stroke-current stroke-2" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                <svg
+                  className="w-5 h-5 fill-none stroke-current stroke-2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  />
                 </svg>
               </a>
               <span className="absolute -top-10 left-1/2 -translate-x-1/2 bg-slate-800 text-cyan-400 text-xs px-2.5 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap border border-slate-700 shadow-lg">
@@ -112,9 +125,9 @@ export const Hero = () => {
 
             {/* WhatsApp */}
             <div className="relative group">
-              <a 
-                href={`https://wa.me/${personalInfo.phone?.replace(/[^0-9]/g, '')}`} 
-                target="_blank" 
+              <a
+                href={`https://wa.me/${personalInfo.phone?.replace(/[^0-9]/g, "")}`}
+                target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 rounded-xl bg-slate-900/80 border border-slate-800 text-slate-300 hover:text-cyan-400 hover:border-cyan-500/40 transition-all flex items-center justify-center"
               >
@@ -126,31 +139,32 @@ export const Hero = () => {
                 WhatsApp
               </span>
             </div>
-
           </div>
-
         </div>
 
         {/* Right Column: Visual / Profile Card */}
         <div className="lg:col-span-5 flex justify-center">
           <div className="relative w-80 h-96 sm:w-96 sm:h-[420px]">
             <div className="absolute inset-0 rounded-3xl bg-gradient-to-tr from-cyan-500 to-blue-600 opacity-25 blur-xl transform rotate-3"></div>
-            
+
             <div className="relative w-full h-full rounded-3xl bg-slate-900/90 border border-slate-700/60 p-6 shadow-2xl flex flex-col items-center justify-center text-center backdrop-blur-md">
               <div className="w-56 h-64 sm:w-64 sm:h-72 rounded-2xl bg-gradient-to-tr from-slate-800 to-slate-900 border border-cyan-500/30 shadow-inner mb-4 overflow-hidden group">
-                <img 
-                  src="src/assets/my-photo.jpg"
-                  alt="Profile" 
+                <img
+                  src={myPhoto}
+                  alt="Profile"
                   className="w-full h-full object-cover group-hover:scale-150 transition-transform duration-500"
                 />
               </div>
 
-              <h3 className="text-xl font-bold text-white">{personalInfo.name}</h3>
-              <p className="text-sm text-cyan-400 mt-1 font-medium">{personalInfo.designation}</p>
+              <h3 className="text-xl font-bold text-white">
+                {personalInfo.name}
+              </h3>
+              <p className="text-sm text-cyan-400 mt-1 font-medium">
+                {personalInfo.designation}
+              </p>
             </div>
           </div>
         </div>
-
       </div>
     </section>
   );

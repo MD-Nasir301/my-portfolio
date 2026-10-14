@@ -14,7 +14,7 @@ export const Navbar = () => {
               <Code2 size={24} />
             </div>
             <span className="text-2xl font-bold tracking-wide text-white">
-              Portfolio<span className="text-cyan-400">.</span>
+              Nasir<span className="text-cyan-400">.</span>
             </span>
           </a>
 

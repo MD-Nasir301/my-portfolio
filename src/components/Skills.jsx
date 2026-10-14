@@ -1,65 +1,145 @@
+import * as Icons from 'lucide-react';
+import { skillsData } from '../data/projectsData';
+
 export const Skills = () => {
-  const skillCategories = [
-    {
-      category: "Frontend Development",
-      skills: ["React.js", "JavaScript (ES6+)", "Tailwind CSS", "HTML5 / CSS3", "Bootstrap"]
-    },
-    {
-      category: "Backend Development",
-      skills: ["Node.js", "Express.js", "RESTful APIs", "Authentication (JWT)"]
-    },
-    {
-      category: "Database & Cloud",
-      skills: ["MongoDB", "Mongoose", "Firebase", "MySQL (Basic)"]
-    },
-    {
-      category: "Tools & Workflow",
-      skills: ["Git & GitHub", "VS Code", "Postman", "Vite", "Vercel / Netlify"]
-    }
-  ];
+  const frontendSkills = skillsData.filter(s => s.category === "Frontend");
+  const backendSkills = skillsData.filter(s => s.category === "Backend");
+  const toolSkills = skillsData.filter(s => s.category === "Tools");
 
   return (
-    <section id="skills" className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden bg-slate-950/40">
-      {/* Background Glow Effect */}
-      <div className="absolute top-1/3 right-0 w-96 h-96 bg-blue-600/10 rounded-full blur-[120px] pointer-events-none"></div>
+    <section id="skills" className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden bg-slate-900">
+      {/* Soft Ambient Background Glows */}
+      <div className="absolute top-1/4 left-1/3 w-[500px] h-[500px] bg-cyan-500/10 rounded-full blur-[140px] pointer-events-none"></div>
+      <div className="absolute bottom-10 right-10 w-[400px] h-[400px] bg-blue-500/10 rounded-full blur-[140px] pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto relative z-10">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
-          <h2 className="text-xs sm:text-sm font-semibold text-cyan-400 tracking-widest uppercase">
-            What I Bring To The Table
+          <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-semibold tracking-widest uppercase">
+            <Icons.Cpu size={14} />
+            <span>Core Competencies</span>
+          </div>
+          <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
+            Technical <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-indigo-400 bg-clip-text text-transparent">Skills</span>
           </h2>
-          <h3 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
-            My <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Skills</span>
-          </h3>
-          <div className="w-16 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 mx-auto rounded-full mt-2"></div>
+          <p className="text-slate-300 text-sm sm:text-base">
+            Everything I use to design, build, and deploy high-performance web applications at a glance.
+          </p>
+          <div className="w-20 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 mx-auto rounded-full mt-3"></div>
         </div>
 
-        {/* Skills Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {skillCategories.map((group, index) => (
-            <div 
-              key={index}
-              className="p-8 rounded-3xl bg-slate-900/70 border border-slate-800 hover:border-cyan-500/40 transition-all duration-300 backdrop-blur-md shadow-xl"
-            >
-              <h4 className="text-xl font-bold text-white mb-6 flex items-center space-x-2">
-                <span className="w-2.5 h-2.5 rounded-full bg-cyan-400"></span>
-                <span>{group.category}</span>
-              </h4>
+        {/* Two-Column Balanced Layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+          
+          {/* Left Column: Frontend (Takes more space) */}
+          <div className="lg:col-span-6 p-6 sm:p-8 rounded-3xl bg-slate-850/80 bg-slate-850 border border-slate-700/70 hover:border-cyan-500/50 transition-all duration-300 backdrop-blur-md shadow-xl flex flex-col justify-between group">
+            <div>
+              <div className="flex items-center space-x-3 mb-6 pb-4 border-b border-slate-700/60">
+                <div className="p-2.5 rounded-xl bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 group-hover:scale-110 transition-transform">
+                  <Icons.Layout size={22} />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-white tracking-wide">Frontend Development</h3>
+                  <p className="text-xs text-slate-400">User interface & client-side ecosystem</p>
+                </div>
+              </div>
 
-              <div className="flex flex-wrap gap-3">
-                {group.skills.map((skill, idx) => (
-                  <span 
-                    key={idx}
-                    className="px-4 py-2 rounded-xl text-sm font-medium bg-slate-800/90 text-cyan-300 border border-slate-700/80 shadow-sm hover:border-cyan-400/50 hover:bg-slate-800 transition-all cursor-default"
-                  >
-                    {skill}
-                  </span>
-                ))}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {frontendSkills.map((skill, idx) => {
+                  const IconComponent = Icons[skill.icon] || Icons.Code;
+                  return (
+                    <div key={idx} className="flex items-center justify-between p-3 rounded-xl bg-slate-900/60 border border-slate-700/50 hover:border-cyan-400/50 hover:bg-slate-900 transition-all group/item shadow-sm">
+                      <div className="flex items-center space-x-3">
+                        <div className={`w-8 h-8 rounded-lg bg-gradient-to-tr ${skill.color} p-[1px] flex items-center justify-center shrink-0`}>
+                          <div className="w-full h-full bg-slate-950 rounded-[7px] flex items-center justify-center text-cyan-400">
+                            <IconComponent size={16} />
+                          </div>
+                        </div>
+                        <span className="text-sm font-semibold text-slate-200 group-hover/item:text-white">{skill.name}</span>
+                      </div>
+                      <span className="w-2 h-2 rounded-full bg-cyan-500/40 group-hover/item:bg-cyan-400 transition-all"></span>
+                    </div>
+                  );
+                })}
               </div>
             </div>
-          ))}
+
+            <div className="mt-8 pt-4 border-t border-slate-700/40 flex items-center justify-between text-[11px] text-slate-400 font-medium uppercase tracking-wider">
+              <span>Focus: UI / UX & Interactivity</span>
+              <span className="text-cyan-400">{frontendSkills.length} Technologies</span>
+            </div>
+          </div>
+
+          {/* Right Column: Backend & Tools (Stacked) */}
+          <div className="lg:col-span-6 space-y-8">
+            
+            {/* Backend Section */}
+            <div className="p-6 sm:p-8 rounded-3xl bg-slate-850/80 bg-slate-850 border border-slate-700/70 hover:border-cyan-500/50 transition-all duration-300 backdrop-blur-md shadow-xl group">
+              <div className="flex items-center space-x-3 mb-6 pb-4 border-b border-slate-700/60">
+                <div className="p-2.5 rounded-xl bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 group-hover:scale-110 transition-transform">
+                  <Icons.Server size={22} />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-white tracking-wide">Backend Development</h3>
+                  <p className="text-xs text-slate-400">Server, APIs & Database management</p>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {backendSkills.map((skill, idx) => {
+                  const IconComponent = Icons[skill.icon] || Icons.Code;
+                  return (
+                    <div key={idx} className="flex items-center justify-between p-3 rounded-xl bg-slate-900/60 border border-slate-700/50 hover:border-cyan-400/50 hover:bg-slate-900 transition-all group/item shadow-sm">
+                      <div className="flex items-center space-x-3">
+                        <div className={`w-8 h-8 rounded-lg bg-gradient-to-tr ${skill.color} p-[1px] flex items-center justify-center shrink-0`}>
+                          <div className="w-full h-full bg-slate-950 rounded-[7px] flex items-center justify-center text-cyan-400">
+                            <IconComponent size={16} />
+                          </div>
+                        </div>
+                        <span className="text-sm font-semibold text-slate-200 group-hover/item:text-white">{skill.name}</span>
+                      </div>
+                      <span className="w-2 h-2 rounded-full bg-cyan-500/40 group-hover/item:bg-cyan-400 transition-all"></span>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+
+            {/* Tools Section */}
+            <div className="p-6 sm:p-8 rounded-3xl bg-slate-850/80 bg-slate-850 border border-slate-700/70 hover:border-cyan-500/50 transition-all duration-300 backdrop-blur-md shadow-xl group">
+              <div className="flex items-center space-x-3 mb-6 pb-4 border-b border-slate-700/60">
+                <div className="p-2.5 rounded-xl bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 group-hover:scale-110 transition-transform">
+                  <Icons.Wrench size={22} />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-white tracking-wide">Tools & Deployment</h3>
+                  <p className="text-xs text-slate-400">Workflow, Version Control & Cloud</p>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {toolSkills.map((skill, idx) => {
+                  const IconComponent = Icons[skill.icon] || Icons.Code;
+                  return (
+                    <div key={idx} className="flex items-center justify-between p-3 rounded-xl bg-slate-900/60 border border-slate-700/50 hover:border-cyan-400/50 hover:bg-slate-900 transition-all group/item shadow-sm">
+                      <div className="flex items-center space-x-3">
+                        <div className={`w-8 h-8 rounded-lg bg-gradient-to-tr ${skill.color} p-[1px] flex items-center justify-center shrink-0`}>
+                          <div className="w-full h-full bg-slate-950 rounded-[7px] flex items-center justify-center text-cyan-400">
+                            <IconComponent size={16} />
+                          </div>
+                        </div>
+                        <span className="text-sm font-semibold text-slate-200 group-hover/item:text-white">{skill.name}</span>
+                      </div>
+                      <span className="w-2 h-2 rounded-full bg-cyan-500/40 group-hover/item:bg-cyan-400 transition-all"></span>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+
+          </div>
+
         </div>
 
       </div>

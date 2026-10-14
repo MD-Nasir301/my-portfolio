@@ -13,6 +13,7 @@ function App() {
       <About />
       <Skills />
       <Projects />
+      
     </>
   );
 }

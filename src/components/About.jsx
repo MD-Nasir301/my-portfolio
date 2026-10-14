@@ -1,101 +1,175 @@
 import * as Icons from 'lucide-react';
+import { aboutData } from '../data/aboutData';
 
 export const About = () => {
-  const Code2 = Icons.Code2 || Icons.Code;
+  const Code = Icons.Code2 || Icons.Code;
   const Cpu = Icons.Cpu || Icons.Terminal;
-  const Rocket = Icons.Rocket || Icons.Send;
-  const UserCheck = Icons.UserCheck || Icons.CheckCircle;
-
-  const highlights = [
-    {
-      icon: Code2,
-      title: "Clean Code",
-      description: "Writing scalable, maintainable, and well-structured code."
-    },
-    {
-      icon: Cpu,
-      title: "Modern Tech Stack",
-      description: "Proficient in React, Node.js, Express, and Tailwind CSS."
-    },
-    {
-      icon: Rocket,
-      title: "Fast Performance",
-      description: "Optimizing web apps for maximum speed and SEO efficiency."
-    },
-    {
-      icon: UserCheck,
-      title: "User-Centric",
-      description: "Designing intuitive UI/UX for seamless user interactions."
-    }
-  ];
+  const ShieldCheck = Icons.ShieldCheck || Icons.CheckCircle;
+  const Award = Icons.Award || Icons.Sparkles;
+  const Download = Icons.Download || Icons.FileText;
+  const Flame = Icons.Flame || Icons.Zap;
 
   return (
-    <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-      {/* Background Glow Effect */}
-      <div className="absolute top-1/2 left-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-[120px] pointer-events-none"></div>
+    <section id="about" className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden bg-slate-900">
+      {/* Background Cyberpunk Ambient Glows */}
+      <div className="absolute top-1/4 left-10 w-[450px] h-[450px] bg-cyan-500/10 rounded-full blur-[140px] pointer-events-none"></div>
+      <div className="absolute bottom-10 right-10 w-[450px] h-[450px] bg-blue-600/10 rounded-full blur-[140px] pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto relative z-10">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
-          <h2 className="text-xs sm:text-sm font-semibold text-cyan-400 tracking-widest uppercase">
-            Get To Know Me
+          <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-semibold tracking-widest uppercase">
+            <Icons.UserCheck size={14} />
+            <span>Developer Journey</span>
+          </div>
+          <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
+            About <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-indigo-400 bg-clip-text text-transparent">Nasirullah Babu</span>
           </h2>
-          <h3 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
-            About <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Me</span>
-          </h3>
-          <div className="w-16 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 mx-auto rounded-full mt-2"></div>
+          <p className="text-slate-300 text-sm sm:text-base">
+            Architecting Scalable Web Applications with Persistence, Clean Code, & Backend Mastery.
+          </p>
+          <div className="w-20 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 mx-auto rounded-full mt-3"></div>
         </div>
 
-        {/* Content Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        {/* Main Grid: Bio Story (Left) & Stats / Core Strengths (Right) */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
           
-          {/* Left Side: Story & Bio */}
-          <div className="lg:col-span-6 space-y-6 text-slate-300 text-base sm:text-lg leading-relaxed">
-            <p>
-              Hello! I'm a passionate <strong className="text-cyan-400 font-semibold">Full-Stack Web Developer</strong> with a strong foundation in building interactive, high-performance web applications.
-            </p>
-            <p>
-              My coding journey started with a curiosity for how websites work, which quickly evolved into a full-fledged career crafting robust frontend designs and powerful backend REST APIs.
-            </p>
-            <p>
-              I thrive on solving complex programming challenges, continuously learning new technologies, and transforming creative ideas into real-world web solutions that drive value.
-            </p>
+          {/* LEFT COLUMN: My Story & Journey (7 Cols) */}
+          <div className="lg:col-span-7 space-y-8">
+            <div className="p-8 rounded-3xl bg-slate-850/90 border border-slate-700/80 backdrop-blur-md shadow-2xl relative overflow-hidden group">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-cyan-500/10 rounded-full blur-2xl group-hover:bg-cyan-500/20 transition-all pointer-events-none"></div>
 
-            {/* Quick Stats Banner */}
-            <div className="grid grid-cols-3 gap-4 pt-4 text-center">
-              <div className="p-4 rounded-2xl bg-slate-900/80 border border-slate-800 backdrop-blur-md">
-                <h4 className="text-2xl sm:text-3xl font-extrabold text-cyan-400">10+</h4>
-                <p className="text-xs sm:text-sm text-slate-400 mt-1 font-medium">Projects Done</p>
+              <div className="flex items-center space-x-3 mb-6">
+                <div className="p-3 rounded-2xl bg-cyan-500/10 border border-cyan-500/20 text-cyan-400">
+                  <Flame size={24} />
+                </div>
+                <div>
+                  <h3 className="text-xl sm:text-2xl font-bold text-white">
+                    The Story of Grit & Resilience
+                  </h3>
+                  <span className="text-xs text-cyan-400 font-medium">
+                    Passion Overcomes Obstacles
+                  </span>
+                </div>
               </div>
-              <div className="p-4 rounded-2xl bg-slate-900/80 border border-slate-800 backdrop-blur-md">
-                <h4 className="text-2xl sm:text-3xl font-extrabold text-cyan-400">100%</h4>
-                <p className="text-xs sm:text-sm text-slate-400 mt-1 font-medium">Dedication</p>
+
+              <div className="space-y-4 text-slate-300 text-sm sm:text-base leading-relaxed">
+                {aboutData.bio.map((paragraph, index) => (
+                  <p key={index} className="font-normal">
+                    {paragraph}
+                  </p>
+                ))}
               </div>
-              <div className="p-4 rounded-2xl bg-slate-900/80 border border-slate-800 backdrop-blur-md">
-                <h4 className="text-2xl sm:text-3xl font-extrabold text-cyan-400">24/7</h4>
-                <p className="text-xs sm:text-sm text-slate-400 mt-1 font-medium">Learning</p>
+
+              {/* Call to Action Buttons */}
+              <div className="pt-8 mt-6 border-t border-slate-700/60 flex flex-wrap gap-4 items-center">
+                <a
+                  href="#contact"
+                  className="px-6 py-3 rounded-xl bg-cyan-400 hover:bg-cyan-300 text-slate-950 font-bold text-xs sm:text-sm flex items-center space-x-2 shadow-lg shadow-cyan-400/20 transition-all hover:-translate-y-0.5"
+                >
+                  <span>Get In Touch</span>
+                  <Icons.ArrowRight size={16} />
+                </a>
+
+                <a
+                  href="/resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-6 py-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700 font-semibold text-xs sm:text-sm flex items-center space-x-2 transition-all hover:-translate-y-0.5"
+                >
+                  <Download size={16} className="text-cyan-400" />
+                  <span>Download Resume</span>
+                </a>
+              </div>
+            </div>
+
+            {/* Core Strengths Section */}
+            <div className="space-y-4">
+              <h4 className="text-xs font-bold text-slate-400 uppercase tracking-widest px-1">
+                Core Competencies & Mindset
+              </h4>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {aboutData.strengths.map((strength, idx) => (
+                  <div
+                    key={idx}
+                    className="p-5 rounded-2xl bg-slate-850/80 border border-slate-800 hover:border-cyan-500/40 transition-all duration-300 space-y-2 backdrop-blur-sm"
+                  >
+                    <div className="flex items-center space-x-2 text-cyan-400">
+                      <ShieldCheck size={18} />
+                      <h5 className="text-sm font-bold text-white">{strength.title}</h5>
+                    </div>
+                    <p className="text-xs text-slate-300 leading-relaxed font-normal">
+                      {strength.description}
+                    </p>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
 
-          {/* Right Side: Feature Cards */}
-          <div className="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {highlights.map((item, index) => {
-              const IconComponent = item.icon;
-              return (
-                <div 
-                  key={index}
-                  className="p-6 rounded-2xl bg-slate-900/70 border border-slate-800 hover:border-cyan-500/40 transition-all duration-300 hover:-translate-y-1 group backdrop-blur-md"
+          {/* RIGHT COLUMN: Quick Stats Grid & Education Badges (5 Cols) */}
+          <div className="lg:col-span-5 space-y-8">
+            
+            {/* Quick Stats Grid */}
+            <div className="grid grid-cols-2 gap-4">
+              {aboutData.stats.map((stat, idx) => (
+                <div
+                  key={idx}
+                  className="p-6 rounded-2xl bg-slate-850/90 border border-slate-800 hover:border-cyan-500/50 transition-all duration-300 text-center space-y-1 shadow-lg backdrop-blur-md group"
                 >
-                  <div className="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 mb-4 group-hover:scale-110 transition-transform">
-                    {IconComponent && <IconComponent size={24} />}
-                  </div>
-                  <h4 className="text-lg font-bold text-white mb-2">{item.title}</h4>
-                  <p className="text-sm text-slate-400 leading-relaxed">{item.description}</p>
+                  <span className="text-3xl sm:text-4xl font-black text-white group-hover:text-cyan-400 transition-colors">
+                    {stat.value}
+                  </span>
+                  <p className="text-xs font-bold text-cyan-300 uppercase tracking-wider">
+                    {stat.label}
+                  </p>
+                  <p className="text-[11px] text-slate-400">
+                    {stat.description}
+                  </p>
                 </div>
-              );
-            })}
+              ))}
+            </div>
+
+            {/* Bootcamp Credentials / Badges Box */}
+            <div className="p-6 rounded-3xl bg-slate-850/90 border border-slate-700/80 backdrop-blur-md shadow-2xl space-y-4">
+              <div className="flex items-center space-x-3 border-b border-slate-700/60 pb-4">
+                <div className="p-2.5 rounded-xl bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">
+                  <Award size={20} />
+                </div>
+                <div>
+                  <h4 className="text-base font-bold text-white">Verified Certifications</h4>
+                  <span className="text-xs text-slate-400">Programming Hero Graduate</span>
+                </div>
+              </div>
+
+              <div className="space-y-3">
+                <div className="p-3.5 rounded-xl bg-slate-900 border border-slate-800 flex items-start space-x-3">
+                  <Cpu size={18} className="text-cyan-400 shrink-0 mt-0.5" />
+                  <div>
+                    <h5 className="text-xs font-bold text-white">
+                      Next Level AI-Driven Software Engineering (2026)
+                    </h5>
+                    <p className="text-[11px] text-slate-400 mt-0.5">
+                      Advanced Architecture, AI Tooling, Modern Next.js & Server Systems.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="p-3.5 rounded-xl bg-slate-900 border border-slate-800 flex items-start space-x-3">
+                  <Code size={18} className="text-cyan-400 shrink-0 mt-0.5" />
+                  <div>
+                    <h5 className="text-xs font-bold text-white">
+                      Full Stack Web Development - Level 1 (2020)
+                    </h5>
+                    <p className="text-[11px] text-slate-400 mt-0.5">
+                      Core Web Technologies, React, Express, MongoDB, & Authentication.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
 
         </div>

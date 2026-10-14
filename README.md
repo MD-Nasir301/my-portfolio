@@ -1,16 +1,35 @@
-# React + Vite
+# 🚀 Nasirullah Babu - Personal Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my official personal portfolio website! This platform showcases my projects, skills, and background as a Full-Stack Web Developer with a dark neon & glassmorphic user interface.
 
-Currently, two official plugins are available:
+👉 **Live Demo:** [https://nasirullah.vercel.app](https://nasirullah.vercel.app) *(Your Vercel URL here)*
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 📌 Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- 🎨 **Modern Dark + Neon Design:** Built using Glassmorphism UI principles for a futuristic feel.
+- 📱 **Fully Responsive:** Smooth layout adaptation across Desktop, Tablet, and Mobile devices.
+- ⚡ **High Performance:** Powered by Vite & React for ultra-fast load times.
+- 🛠️ **Categorized Skills:** Clear technical breakdown of Frontend, Backend, Database, and Tools.
+- 💼 **Interactive Work Showcase:** Card-based gallery with live demo and source code links.
+- ✉️ **Functional Contact Section:** Direct access to email, social links, and message form.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tech Stack & Tools
+
+- **Frontend:** React.js, Tailwind CSS
+- **Icons:** Lucide React, React Icons
+- **Build Tool:** Vite
+- **Deployment:** Vercel / GitHub Pages
+
+---
+
+## 💻 Local Setup & Installation
+
+To run this project on your local machine, follow these steps:
+
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/your-username/my-portfolio.git](https://github.com/your-username/my-portfolio.git)

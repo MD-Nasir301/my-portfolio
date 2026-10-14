@@ -139,7 +139,7 @@ export const Hero = () => {
             <div className="relative w-full h-full rounded-3xl bg-slate-900/90 border border-slate-700/60 p-6 shadow-2xl flex flex-col items-center justify-center text-center backdrop-blur-md">
               <div className="w-56 h-64 sm:w-64 sm:h-72 rounded-2xl bg-gradient-to-tr from-slate-800 to-slate-900 border border-cyan-500/30 shadow-inner mb-4 overflow-hidden group">
                 <img 
-                  src="src/assets/my-photo.jpg" 
+                  src="src/assets/my-photo.jpg"
                   alt="Profile" 
                   className="w-full h-full object-cover group-hover:scale-150 transition-transform duration-500"
                 />

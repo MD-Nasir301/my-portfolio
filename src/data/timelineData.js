@@ -1,4 +1,18 @@
 export const practicalExperienceData = [
+{
+    id: 2,
+    period: "2020 - 2025 (Career Context)",
+    role: "Computer Systems Operator & Administrative Data Lead",
+    company: "Educational Institutions",
+    type: "System Operations & IT Support",
+    description: "Managed academic documentation, computer systems operation, account database handling, and IT hardware troubleshooting while keeping a steady focus on transitioning into full-time software engineering.",
+    highlights: [
+      "Designed and prepared official examination question papers and academic instruction sheets using MS Word.",
+      "Managed institutional accounts and student data, meticulously checking and resolving discrepancies through Excel spreadsheet data entries.",
+      "Handled primary computer hardware troubleshooting, resolving technical issues independently or coordinating external maintenance when required.",
+      "Provided technical support and solved IT/ID-related operational problems for colleagues and students."
+    ]
+  },
   {
     id: 1,
     period: "2025 - Present",
@@ -12,18 +26,7 @@ export const practicalExperienceData = [
       "Maintained structured Git repositories with clean code standards, modular file architecture, and responsive designs."
     ]
   },
-  {
-    id: 2,
-    period: "2020 - 2025 (Career Context)",
-    role: "Computer Systems Operator & Administrative Data Lead",
-    company: "Educational Institutions",
-    type: "System Operations",
-    description: "Managed computer software operations, database management, and hardware troubleshooting while preparing to transition full-time into software engineering.",
-    highlights: [
-      "Demonstrated strong computer operations, data entry accuracy, and troubleshooting skills over 5 years.",
-      "Funded personal software setup through hard work to return full-time to software development."
-    ]
-  }
+
 ];
 
 export const educationData = [

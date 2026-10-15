@@ -4,7 +4,7 @@ export const personalInfo = {
   bio: "I am a passionate web developer focused on building clean, responsive, and high-performance web applications using modern technologies.",
   email: "nasir21b@gmail.com",
   phone: "+880 1948 860166",
-  github: "https://github.com/MD-Nasir301",
+  github: "https://github.com/nasir-babu",
   linkedin: "https://linkedin.com/in/nasirullah-babu-8342531b8",
 };
 

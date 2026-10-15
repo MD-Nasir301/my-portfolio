@@ -5,7 +5,7 @@ export const personalInfo = {
   email: "nasir21b@gmail.com",
   phone: "+880 1948 860166",
   github: "https://github.com/nasir-babu",
-  linkedin: "https://linkedin.com/in/nasirullah-babu-8342531b8",
+  linkedin: "https://linkedin.com/in/nasir-babu",
 };
 
 export const skillsData = [
@@ -348,6 +348,3 @@ export const projectsData = [
     ],
   },
 ];
-
-
-

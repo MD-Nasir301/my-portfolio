@@ -40,6 +40,12 @@ export const Navbar = () => {
               Skills
             </a>
             <a
+              href="#experience"
+              className="text-slate-300 hover:text-cyan-400 transition-colors text-base font-medium tracking-wide"
+            >
+              Experience
+            </a>
+            <a
               href="#contact"
               className="text-slate-300 hover:text-cyan-400 transition-colors text-base font-medium tracking-wide"
             >

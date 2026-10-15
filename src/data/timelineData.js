@@ -1,4 +1,17 @@
 export const practicalExperienceData = [
+    {
+    id: 1,
+    period: "2025 - Present",
+    role: "Full-Stack Web Developer (Projects & Hands-on)",
+    company: "Personal & Open Source Showcase",
+    type: "Practical Engineering",
+    description: "Focusing on architecting production-ready, scalable web applications with clean, modular JavaScript and modern framework patterns.",
+    highlights: [
+      "Built multi-role civic platforms (City Service) with JWT auth, role-based dashboards, and cloud integrations.",
+      "Engineered JavaScript e-commerce engines (NextBuy) managing state, persistent carts, and local/mock API sync.",
+      "Maintained structured Git repositories with clean code standards, modular file architecture, and responsive designs."
+    ]
+  },
 {
     id: 2,
     period: "2020 - 2025 (Career Context)",
@@ -13,19 +26,7 @@ export const practicalExperienceData = [
       "Provided technical support and solved IT/ID-related operational problems for colleagues and students."
     ]
   },
-  {
-    id: 1,
-    period: "2025 - Present",
-    role: "Full-Stack Web Developer (Projects & Hands-on)",
-    company: "Personal & Open Source Showcase",
-    type: "Practical Engineering",
-    description: "Focusing on architecting production-ready, scalable web applications with clean, modular JavaScript and modern framework patterns.",
-    highlights: [
-      "Built multi-role civic platforms (City Service) with JWT auth, role-based dashboards, and cloud integrations.",
-      "Engineered JavaScript e-commerce engines (NextBuy) managing state, persistent carts, and local/mock API sync.",
-      "Maintained structured Git repositories with clean code standards, modular file architecture, and responsive designs."
-    ]
-  },
+
 
 ];
 
